@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> UofT Create Account </title> <!-- Sets the tab name. -->
+  <link rel="icon" type="image/ico" href="UofT.png"> <!-- Sets the tab icon. -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="alert-outer">
+	<div id="alert-inner">
+		<span id="alert-message">This is the default alert text.</span>
+		<br><br>
+		<button id="alert-button">Okay</button>
+	</div>
+</div>
+<div class="wrapper">
+	<header>
+		<img src="UTL-logo-blue.png" width="450" height="100"></img><br>
+		<p>
+			This is an application form to recieve your University of Toronto library
+			account.
+			<br>
+			With a registered account you gain access to borrowing and reserving library
+			resources.
+		</p>
+	</header>
+	<main>
+		<b>Account Creation Form</b><br><br>
+		<input required type="email" id="email" placeholder="Email Address"><br>
+		<input required type="text" id="firstName" placeholder="First Name"><br>
+		<input required type="text" id="lastName" placeholder="Last Name"><br>
+		<input required type="text" id="ID" placeholder="University ID"><br><br>
+		<input required type="password" id="password" placeholder="Password"><br>
+		<input required type="password" id="confirm" placeholder="Confirm Password"><br>
+
+		<input type="button" value="Submit" onclick="checkFields()"><br>
+		<div id="wrongInfo">
+			Please enter valid info and fill all fields.
+			<br>
+			Note: Use your U of T email and name associated with the University.
+		</div>
+		
+		<!-- Adds button to submit application and return back to the log in page.-->
+		<br>
+		<a href='index.html'><input type="button" value="Return to Login"></a>
+	</main>
+	<footer>
+
+	</footer>
+</div>
+<center>
+  <!-- Adds an image for the top of the page along with the application form below. -->
+
+  <!--<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeQuzmQHiIuD-s__Ejn7rBvMKNd3DWHW79HsGJopmnVB0JPZg/viewform?embedded=true" width="700" height="1320" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe></br>
+  -->
+
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+<script src="alert.js"></script>
+<script src="userId.js"></script>
+<script src="application.js"></script><!-- script used for collecting the info -->
+</html>

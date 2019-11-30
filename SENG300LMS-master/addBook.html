@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> UofT Add Book </title> <!-- Sets the tab name. -->
+  <link rel="icon" type="image/ico" href="UofT.png"> <!-- Sets the tab icon. -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="alert-outer">
+	<div id="alert-inner">
+		<span id="alert-message">This is the default alert text.</span>
+		<br><br>
+		<button id="alert-button">Okay</button>
+	</div>
+</div>
+<div class="wrapper">
+
+	<header>
+		<img src="UTL-logo-blue.png" width="450" height="100"></img><br>
+	</header>
+
+	<div class="navBar">
+		<a href="search.html">Home</a>
+		<a href="contactReview.html" onload="reviewContactForms()">Review Contact Forms</a>
+		<a href="admin.html" onclick="">Users</a>
+		<a href="#" onclick="logout()">Logout</a>
+	</div>
+
+	<main>
+		<b id="title">Check Book Existence</b><br><br>
+		<input required type="text" id="book_name" placeholder="Book Name"><br>
+		<input required type="text" id="book_author" placeholder="Book Author"><br>
+		<span id="extra-spicy" style="display: none;">
+			<input required type="text" id="book_published" placeholder="Year Published"><br>
+			<input required type="text" id="book_quantity" placeholder="Quantity"><br>
+			<input required type="text" id="book_genre" placeholder="Genre"><br>
+			<input type="button" value="Create" onclick="createNewBook();"><br>
+		</span>
+		<span id="regular-spice">
+			<input type="button" value="Check" onclick="checkBookExistence();"><br>
+		</span>
+
+		<div id="wrongInfo">
+			That book already exists.
+		</div>
+
+	</main>
+
+	<footer>
+	</footer>
+
+</div>
+<center>
+
+</body>
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+	<script src="alert.js"></script>
+	<script src="userId.js"></script>
+	<script src="addBook.js"></script>
+</html>

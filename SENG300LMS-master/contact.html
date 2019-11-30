@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title> UofT Contact Us </title> <!-- Sets the tab name. -->
+	<link rel="icon" type="image/ico" href="UofT.png"> <!-- Sets the tab icon. -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="alert-outer">
+		<div id="alert-inner">
+			<span id="alert-message">This is the default alert text.</span>
+			<br><br>
+			<button id="alert-button">Okay</button>
+		</div>
+	</div>
+	<div class="wrapper">
+		<header>
+			<!-- Adds image for the top of the page. -->
+			<img src="UTL-logo-blue.png" width="450" height="100">
+			<p>
+				Please enter your information below to contact us about any questions,
+				comments, concerns, or bugs/errors that you may find in the system.
+			</p>
+		</header>
+		<main>
+			<input required type="text" id="email" placeholder="Email Address"><br>
+			<textarea type="text" id="contact" placeholder="Enter response here." style="outline: none; resize: none; border-radius: 15px; padding: 10px; height: 125px; width: 215px"></textarea><br>
+
+
+			<!-- Adds button to submit contact form and return back to the log in page.-->
+			<input type="button" value="Submit" onclick="collectData()"><br>
+			<a href='index.html'><input type="button" value="Return to Login"></a>
+		</main>
+		<footer>
+		</footer>
+	</div>
+
+<center>
+
+
+
+
+</center>
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+<script src="alert.js"></script>
+<script type="text/JavaScript" src="contact.js"></script><!-- script used for collecting the info -->
+<script src="userId.js"></script>
+</html>
